@@ -1,55 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    
+    <meta charset="UTF-8">
+    <title>AddressBook</title>
+    <link rel="stylesheet" href="styles/addressbook.css">
+    <script src="scripts/addressbook.js"></script>
 </head>
+
 <body>
-<script src="js/script.js"></script>
-<div id="navigation">
-    <ul class="nav-list">
-        <li id="js-show-all">Show all Contacts</li>
-        <li id="js-search">Search</li>
-        <li id="js-add-new">Add New Contact</li>
-    </ul>
-</div>
-<div id="search-panel" class="panel">
-    <h1>Search Contacts</h1>
-    <form id="search" action="#">
-        <div id="results">
+    <div class="container">
+        <div class="title">
+            <h1>Address Book</h1>
+        </div>
+        <div class="quickadd"><button id="QuickAdd">Add +</button></div>
+        <div class="quickaddForm">
+            <label for="fullname">Name</label><input type="text" id="fullname" class="formFields">
+            <label for="phone">Phone</label><input type="text" id="phone" class="formFields">
+            <label for="address">Address</label><textarea name="address" id="address" cols="30" rows="10" class="formFields"></textarea>
+            <label for="city">City</label><input type="text" id="city" class="formFields">
+            <label for="email">E-Mail</label><input type="text" id="email" class="formFields">
+            <br><br>
+            <button id="Add">Add Now</button><button id="Cancel">Cancel</button>
+        </div>
+        <div class="addbook">
+            <!-- <div class="entry">
+				<div class="name"><p>Sachin Bhatnagar</p></div>
+				<div class="email"><p>sachin@frameboxx.in</p></div>
+				<div class="phone"><p>9316523541</p></div>
+				<div class="address"><p>House No. 8, Sector 10 - A</p></div>
+				<div class="city"><p>Chandigarh</p></div>
+				<div class="del"><a href="#">Delete</a></div>
+			</div> -->
 
         </div>
-        <div>
-            <label>
-                <input type="text" name="search" id="search" placeholder="Enter name of contact" />
-            </label>
-        </div>
-        <input type="submit" value="Submit" />
-    </form>
-</div>
-<div id="contact-panel" class="panel">
-    <form id="contact" action="#">
-        <h1>Add a new contact</h1>
-        <div>
-               Name <input type="text" name="person" id="name" placeholder="John Smith" />
-            
-                Phone Number
-                <input type="text" name="phone" id="name" placeholder="1234567" />
-                Email Address
-                <input type="text" name="email" id="name" placeholder="john@example.com" />
-            
-                Picture
-                <input type="file" name="image" id="name" placeholder="Add Picture">
-            
-        </div>
-        <div>
-            <input type="submit" value="Submit" />
-        </div>
-    </form>
-</div>
-<div id="show-panel" class="panel">
-
-</div>
+    </div>
 </body>
+
 </html>
